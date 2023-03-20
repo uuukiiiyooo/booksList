@@ -1,40 +1,22 @@
 const bookListContainer = document.getElementById('bookList');
 const submitBook = document.querySelector('#submitBook');
+let booksDetails = [];
 
 submitBook.addEventListener('click', () => {
   const singleBook = document.getElementById('bookTitle').value;
-  const singleAuthor = document.getElementById('bookTitle').value;
-  console.log(singleBook);
-  console.log(singleAuthor);
+  const singleAuthor = document.getElementById('bookAuthor').value;
+  let newBook = new DisplayBooks(singleBook, singleAuthor);
+  booksDetails.push(newBook);
+  booksDetails.forEach((book) => {
+    bookListContainer.innerHTML += `
+      <p>${book.title}<br>${book.author}</p>
+      <button>Remove</button>
+    `
+});
 })
 
-
-// let booksDetails = [
-//   {
-//     title: 'Something',
-//     author: 'Ukiyo',
-//   },
-//   {
-//     title: 'Something II',
-//     author: 'Same',
-//   }
-// ];
-
-// booksDetails.forEach((book) => {
-//   submitBook.addEventListener('click', () => {
-//     bookListContainer.innerHTML += `
-//       <p>${book.title}<br>${book.author}</p>
-//       <button>Remove</button>
-//     `
-//   });
-// });
-
-// function DisplayBooks(title, author) {
-//   this.title = title;
-//   this.author = author;
-//   this.add = function() {
-//     booksData.push(this.title, this.author);
-//   }
-// }
-
+function DisplayBooks(title, author) {
+  this.title = title;
+  this.author = author;
+}
 // const example = new DisplayBooks('Book name', 'Book Author')
