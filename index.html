@@ -1,15 +1,25 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Book List</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Books For Hire</title>
 </head>
-
 <body>
-  <script src="arrangeBooks.js"></script>
-</body>
+  <section>
+    <h1>Books for Hire</h1>
+  </section>
 
+  <div id="bookList"></div>
+  
+  <section id="inputData">
+    <input id="bookTitle" aria-label="Enter book's title" name="booksTitle" type="text" placeholder="Enter book's title" required><br>
+    <input id="bookAuthor" aria-label="Enter book's author" name="booksAuthor" type="text" placeholder="Enter book's author" required><br>
+    <button id="submitBook" type="submit">Join for adventure!</button>
+  </section>
+
+  <script src="/js/arrangeBooks.js"></script>
+</body>
 </html>
