@@ -1,40 +1,55 @@
+class Book {
+  constructor(_title, _author) {
+    this.title = _title;
+    this.author = _author;
+  }
+}
+
 const bookListContainer = document.getElementById('bookList');
-const submitBook = document.querySelector('#submitBook');
+const addBook = document.querySelector('#addBook');
+let removeBtns;
+let bookArr = [];
 
-submitBook.addEventListener('click', () => {
-  const singleBook = document.getElementById('bookTitle').value;
-  const singleAuthor = document.getElementById('bookTitle').value;
-  console.log(singleBook);
-  console.log(singleAuthor);
-})
+function addB(_title, _author) {
+  const n = new Book(_title, _author);
+  bookArr.push(n);
+}
 
+function update() {
+  bookListContainer.innerHTML = '';
+  bookArr.forEach((book) => {
+    bookListContainer.innerHTML += `
+    <div id="cont">
+    <p>${book.title}</p>
+    <p>${book.author}</p>
+    <button class='remove-btn'">Remove</button>
+    <hr>
+    </div>
+    `;
+  });
 
-// let booksDetails = [
-//   {
-//     title: 'Something',
-//     author: 'Ukiyo',
-//   },
-//   {
-//     title: 'Something II',
-//     author: 'Same',
+  addBook.addEventListener('click', () => {
+    const inputTitle = document.getElementById('bookTitle').value;
+    const inputAuthor = document.getElementById('bookAuthor').value;
+    addB(inputTitle, inputAuthor);
+    update();
+  });
+
+  removeBtns = document.querySelectorAll('.remove-btn');
+  removeBtns.forEach((removeBtn, index) => {
+    removeBtn.addEventListener('click', () => {
+      bookArr.splice(index, 1);
+      update();
+    });
+  });
+
+  // Save books to localStorage
+  localStorage.setItem('bookArr', JSON.stringify(bookArr));
+}
+// // Load books from localStorage on page load
+// window.onload = function () {
+//   if (localStorage.getItem('bookArr')) {
+//     bookArr = JSON.parse(localStorage.getItem('bookArr'));
+//     update();
 //   }
-// ];
-
-// booksDetails.forEach((book) => {
-//   submitBook.addEventListener('click', () => {
-//     bookListContainer.innerHTML += `
-//       <p>${book.title}<br>${book.author}</p>
-//       <button>Remove</button>
-//     `
-//   });
-// });
-
-// function DisplayBooks(title, author) {
-//   this.title = title;
-//   this.author = author;
-//   this.add = function() {
-//     booksData.push(this.title, this.author);
-//   }
-// }
-
-// const example = new DisplayBooks('Book name', 'Book Author')
+// };
