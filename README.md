@@ -30,7 +30,7 @@ After you're finished please remove all the comments and instructions!
   <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/> -->
 
-  <h3><b>Book list app</b></h3>
+  [Book list app] <a name="about-project"></a>
 
 </div>
 
@@ -60,11 +60,11 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [My First ] <a name="about-project"></a>
+# 📖 [Book list app] <a name="about-project"></a>
 
 <!-- > Describe your project in 1 or 2 sentences. -->
 
-**[My First Microverse Portfolio]** is a replicated mobile first version of <a href="https://www.behance.net/gallery/29845175/CC-Global-Summit-2015">this Cindy Shin design</a> based on html5, css3 queries and javascript.
+**[Book list app]** is a web app so that you can store your favorite books on a digital shelf.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -87,8 +87,8 @@ After you're finished please remove all the comments and instructions!
 
 <!-- > Describe between 1-3 key features of the application. -->
 
-- **This is a mobile first and responsive website**
-- **It shows a copy of [this Cindy Shin design](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015)**
+- **This app stores data from your favorite books and show them as a list**
+- **[future_feature]**
 - **[future_feature]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -99,7 +99,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- > Add a link to your deployed project. -->
 
-- [Live Demo Link](https://uuukiiiyooo.github.io/)
+- Not available yet
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -131,7 +131,7 @@ Clone this repository to your desired folder:
 
 cd my-folder
 
-git clone https://github.com/uuukiiiyooo/capstone_module01.git
+git clone [https://github.com/uuukiiiyooo/capstone_module01.git](https://github.com/uuukiiiyooo/booksList.git)
 <!--
 Example commands:
 
@@ -159,9 +159,7 @@ Example command:
 
 ### Usage
 
-To run the project, execute the following command:
-
-You can check it out on the [Live Demo](https://uuukiiiyooo.github.io/)
+To run the project download and run locally.
 <!--
 Example command:
 
@@ -187,7 +185,7 @@ Example command:
 
 <!--You can deploy this project using:-->
 
-GitHub Pages
+Not available yet.
 <!--
 Example:
 
@@ -204,19 +202,18 @@ Example:
 
 <!-- > Mention all of the collaborators of this project. -->
 
-👤 **Cindy Shin**
-
-- Behance: [@adagio07](https://www.behance.net/adagio07)
-<!-- - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)-->
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 👤 **Ukiyo**
 
 - GitHub: [@uuukiiiyooo](https://github.com/uuukiiiyooo)
 - Twitter: [@uuukiiiyooo](https://twitter.com/uuukiiiyooo)
 <!-- - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle) -->
+
+👤 **Christian Onoh**
+
+- GitHub: [@christianonoh](https://github.com/christianonoh)
+<!-- - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle) -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
@@ -278,7 +275,7 @@ Thanks for pushing so hard Microverse, I'm amazed of what can I do now!
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](LICENSE.md) licensed.
+This project is [MIT](/LICENSE.md) licensed.
 
 <!-- _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._ -->
 
