@@ -1,40 +1,53 @@
-const bookListContainer = document.getElementById('bookList');
-const submitBook = document.querySelector('#submitBook');
+const bookList = document.getElementById('bookList');
+const submitButton = document.getElementById('submitButton');
 
-submitBook.addEventListener('click', () => {
-  const singleBook = document.getElementById('bookTitle').value;
-  const singleAuthor = document.getElementById('bookTitle').value;
-  console.log(singleBook);
-  console.log(singleAuthor);
-})
+let bookShelf = JSON.parse(localStorage.getItem('bookShelf')) || [];
 
+function removeBook(title, author) {
+  bookShelf = bookShelf.filter((book) => book.title !== title || book.author !== author);
 
-// let booksDetails = [
-//   {
-//     title: 'Something',
-//     author: 'Ukiyo',
-//   },
-//   {
-//     title: 'Something II',
-//     author: 'Same',
-//   }
-// ];
+  localStorage.setItem('bookShelf', JSON.stringify(bookShelf));
 
-// booksDetails.forEach((book) => {
-//   submitBook.addEventListener('click', () => {
-//     bookListContainer.innerHTML += `
-//       <p>${book.title}<br>${book.author}</p>
-//       <button>Remove</button>
-//     `
-//   });
-// });
+  const singleBook = document.getElementById(`${title}-${author}`);
+  if (singleBook) {
+    bookList.removeChild(singleBook);
+  }
+}
 
-// function DisplayBooks(title, author) {
-//   this.title = title;
-//   this.author = author;
-//   this.add = function() {
-//     booksData.push(this.title, this.author);
-//   }
-// }
+function displayBook(book) {
+  const singleBook = document.createElement('li');
+  singleBook.setAttribute('id', `${book.title}-${book.author}`);
 
-// const example = new DisplayBooks('Book name', 'Book Author')
+  const bookPrint = document.createElement('span');
+  bookPrint.innerHTML = `${book.title}<br>${book.author}<br>`;
+  const removeButton = document.createElement('button');
+  removeButton.innerText = 'Leave team';
+  removeButton.addEventListener('click', () => removeBook(book.title, book.author));
+
+  singleBook.appendChild(bookPrint);
+  singleBook.appendChild(removeButton);
+  bookList.appendChild(singleBook);
+}
+
+function addBook(title, author) {
+  const newBook = {
+    title,
+    author,
+  };
+
+  bookShelf.push(newBook);
+
+  localStorage.setItem('bookShelf', JSON.stringify(bookShelf));
+  document.getElementById('bookTitle').value = '';
+  document.getElementById('bookAuthor').value = '';
+
+  displayBook(newBook);
+}
+
+bookShelf.forEach((book) => displayBook(book));
+
+submitButton.addEventListener('click', () => {
+  const title = document.getElementById('bookTitle').value;
+  const author = document.getElementById('bookAuthor').value;
+  addBook(title, author);
+});
