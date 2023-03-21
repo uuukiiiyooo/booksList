@@ -8,16 +8,21 @@
   <title>Books For Hire</title>
 </head>
 <body>
-  <section>
+  <header>
     <h1>Books for Hire</h1>
+  </header>
+
+  <section id="listDisplay">
+    <ul id="bookList"></ul>
   </section>
 
-  <ul id="bookList"></ul>
+  <div id="divider"></div>
   
   <section id="inputData">
-    <input id="bookTitle" aria-label="Enter book's title" name="booksTitle" type="text" placeholder="Enter book's title" required><br>
-    <input id="bookAuthor" aria-label="Enter book's author" name="booksAuthor" type="text" placeholder="Enter book's author" required><br>
-    <button id="submitButton" type="submit">Join for adventure!</button>
+    <h2>Recruit new member</h2>
+    <input id="bookTitle" aria-label="Enter book's title" name="booksTitle" type="text" placeholder="Enter book's title" required>
+    <input id="bookAuthor" aria-label="Enter book's author" name="booksAuthor" type="text" placeholder="Enter book's author" required>
+    <button id="submitButton" type="submit">Join ranks</button>
   </section>
 
   <script src="/js/arrangeBooks.js"></script>

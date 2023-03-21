@@ -30,9 +30,9 @@ class BookShelf {
     const singleBook = document.createElement('li');
     singleBook.setAttribute('id', `${book.title}-${book.author}`);
     const bookPrint = document.createElement('span');
-    bookPrint.innerHTML = `${book.title}<br>${book.author}<br>`;
+    bookPrint.innerHTML = `${book.title} by ${book.author}<br>`;
     const removeButton = document.createElement('button');
-    removeButton.innerText = 'Leave team';
+    removeButton.innerText = 'Remove';
     removeButton.addEventListener('click', () => this.removeBook(book.title, book.author));
     singleBook.appendChild(bookPrint);
     singleBook.appendChild(removeButton);
