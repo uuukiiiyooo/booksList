@@ -55,3 +55,8 @@ class BookShelf {
 }
 
 const bookShelf = new BookShelf();
+
+const displayList = document.getElementById('displayList');
+displayList.addEventListener('click', () => {
+  displayList.classList.add('inputDataToggle');
+})
