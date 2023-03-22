@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 class BookShelf {
   constructor() {
     this.bookList = document.getElementById('bookList');
@@ -53,4 +55,3 @@ class BookShelf {
 }
 
 const bookShelf = new BookShelf();
-console.log(bookShelf);
