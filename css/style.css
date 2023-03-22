@@ -64,10 +64,6 @@ nav ul {
   align-items: center;
 }
 
-/* .displayListToggle {
-  display: none;
-} */
-
 .current-date {
   display: flex;
   justify-content: end;
@@ -129,10 +125,6 @@ h1 {
 }
 
 #inputData {
-  display: none;
-}
-
-.inputDataToggle {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -172,10 +164,6 @@ h1 {
 
 /* contact section */
 #contact {
-  display: none;
-}
-
-#contactToggle {
   display: flex;
   flex-direction: column;
   align-items: center;
