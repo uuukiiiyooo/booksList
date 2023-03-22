@@ -1,4 +1,93 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+  background-color: #2c3333;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: underline;
+  color: #cbe4de;
+  padding: 25px 0 25px;
+}
+
+#listDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#listDisplay ul {
+  width: 80%;
+  margin: 0 0 25px;
+  border: 2px solid #cbe4de;
+  border-radius: 4px;
+}
+
+#listDisplay li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  list-style: none;
+  line-height: 18px;
+  color: #cbe4de;
+  background-color: #2e4f4f;
+}
+
+#listDisplay li:nth-child(2n) {
+  background-color: #0e8388;
+}
+
+#listDisplay span {
+  width: 80%;
+}
+
+#listDisplay button {
+  width: 90px;
+  height: 27px;
+  border-radius: 7px;
+  border: 1px solid #2e4f4f;
+  color: #2c3333;
+}
+
+#divider {
+  width: 60%;
+  height: 2px;
+  margin: auto;
+  background-color: #2e4f4f;
+}
+
+#inputData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 80%;
+}
+
+#inputData h2 {
+  padding: 15px 0 12px;
+  color: #cbe4de;
+}
+
+#inputData input {
+  margin: 0 0 12px;
+  padding: 0 10px;
+  width: 96%;
+  height: 21px;
+  border: 1px solid #2e4f4f;
+}
+
+#inputData button {
+  width: 90px;
+  height: 27px;
+  border: 1px solid #2e4f4f;
+  color: #2c3333;
 }
