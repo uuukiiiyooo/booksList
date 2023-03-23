@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +8,59 @@
   <link rel="stylesheet" href="/css/style.css">
   <title>Books For Hire</title>
 </head>
+
 <body>
   <header>
-    <h1>Books for Hire</h1>
+    <nav>
+      <div class="logo">
+        <img src="assets/logo-dark.png" alt="Books4Hire logo">
+      </div>
+      <ul>
+        <li class="nav-item">
+          <a id="displayList" href="#" class="nav-link">Guild members</a> 
+        </li>
+        <li class="nav-item">
+          <a id="displayAdd" href="#" class="nav-link"> Recruit</a>
+        </li>
+        <li class="nav-item">
+          <a id="displayContact" href="#" class="nav-link"> Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <p class="current-date">March 19th 2023, 9:25:32 am</p>
   </header>
 
-  <section id="listDisplay">
+  <section class="listDisplays hide" id="listDisplay">
+    <h1>Books for Hire</h1>
     <ul id="bookList"></ul>
   </section>
 
-  <div id="divider"></div>
-  
-  <section id="inputData">
+  <section class="hidden inputDatas" id="inputData">
     <h2>Recruit new member</h2>
-    <input id="bookTitle" aria-label="Enter book's title" name="booksTitle" type="text" placeholder="Enter book's title" required>
-    <input id="bookAuthor" aria-label="Enter book's author" name="booksAuthor" type="text" placeholder="Enter book's author" required>
+    <input id="bookTitle" aria-label="Enter book's title" name="booksTitle" type="text" placeholder="Enter book's title"
+      required>
+    <input id="bookAuthor" aria-label="Enter book's author" name="booksAuthor" type="text"
+      placeholder="Enter book's author" required>
     <button id="submitButton" type="submit">Join ranks</button>
   </section>
 
+  <section class="contacts hidden" id="contact">
+    <h2>Contact information</h2>
+    <p>If you have any questions or issues with the guild members, you can send a magic owl or get in touch through:</p>
+    <ul>
+      <li>Our email: christianandukiyo@microverse.com</li>
+      <li>Our phone number: 7957354833</li>
+      <li>Our address: No 23 Sesame street Ngwo, Mexico</li>
+    </ul>
+  </section>
+
+  <section id="footer">
+    <div class="logo">
+      <img src="assets/logo-light.png" alt="Books4Hire logo">
+    </div>
+    <p>All rights reserved</p>
+  </section>
   <script src="/js/arrangeBooks.js"></script>
 </body>
+
 </html>
