@@ -84,3 +84,9 @@ displayContactLink.addEventListener('click', () => {
   inputDataSection.classList.add('hidden');
   contactSection.classList.remove('hidden');
 });
+
+// Time and Date
+const currentDate = new Date();
+const date = currentDate.toDateString();
+const time = currentDate.toLocaleTimeString();
+document.querySelector('.current-date').innerHTML = `${date} ${time}`;
